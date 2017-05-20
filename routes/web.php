@@ -21,4 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Route::resource('profil','ProfileController');
 
+Route::get('/produits', 'ProductsController@index');
+Route::get('/produits/{produit}', 'ProductsController@show');
+
 Route::resource('annonce','AnnonceController');
