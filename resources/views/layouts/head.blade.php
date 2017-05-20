@@ -9,7 +9,7 @@
 
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<link href="{{ asset('css/layouts.css') }}" rel="stylesheet">
+<link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
 <!-- Scripts -->
 <script>
