@@ -22,6 +22,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::resource('profil','ProfileController');
 
 Route::get('/produits', 'ProductsController@index');
-Route::get('/produits/{produit}', 'ProductsController@show');
+Route::get('/produits/create', 'ProductsController@create');
+Route::get('/produits/{renderProduct}', 'ProductsController@show');
+Route::post('/produits', 'ProductsController@store');
 
 Route::resource('annonce','AnnonceController');

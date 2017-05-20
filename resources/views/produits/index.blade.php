@@ -3,7 +3,9 @@
 
 @section('content')
     <div class="container">
-        blublublub
+        @foreach($renderProducts as $product)
+            @include('produits.renderProduits')
+        @endforeach
     </div>
 @endsection
 
