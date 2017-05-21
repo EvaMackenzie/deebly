@@ -7,9 +7,16 @@ use App\Products;
 
 class ProductsController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        $renderProducts = Products::latest()->get();
+        //$renderProducts = Products::latest()->get();
+        $renderProducts = Products::latest()->paginate(3);
         return view('produits.index', compact('renderProducts'));
     }
 
