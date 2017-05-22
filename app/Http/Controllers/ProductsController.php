@@ -17,6 +17,7 @@ class ProductsController extends Controller
     {
         //$renderProducts = Products::latest()->get();
         $renderProducts = Products::latest()->paginate(3);
+        //dd($renderProducts);
         return view('produits.index', compact('renderProducts'));
     }
 

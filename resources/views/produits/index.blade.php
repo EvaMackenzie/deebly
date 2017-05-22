@@ -3,6 +3,8 @@
 
 @section('content')
     <div class="container">
+        <h3 class="text-right">{{$renderProducts->total()}} produits dispo à la location</h3>
+
         @foreach($renderProducts as $product)
             @include('produits.renderProduits')
         @endforeach
