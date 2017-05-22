@@ -6,9 +6,12 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 <title>@yield('pageTitle') - Deebly</title>
-
+<!--Import Google Icon Font-->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
 <!-- Scripts -->

@@ -41,3 +41,51 @@
 .section-white {
 	background-color: $color-white;
 }
+
+.section-nav {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.side-nav li a{
+	color: #727272;
+	padding: 0 32px;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	text-transform: uppercase;
+	background-color: transparent;
+	line-height: 24px;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.menu-1 li a {
+	color: #727272;
+	padding: 14px 6px;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	text-transform: uppercase;
+	background-color: transparent;
+	line-height: 24px;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+
+nav .brand-logo {
+	position: absolute;
+	color: #727272;
+	display: inline-block;
+	font-size: 2.1rem;
+	padding: 0;
+	white-space: nowrap;
+}
+
+@media only screen and (min-width: 1px) {
+	nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+	color: #727272;
+	&:hover {
+		color: #727272;
+		text-decoration: none;
+	}
+}}

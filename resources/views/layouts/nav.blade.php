@@ -1,3 +1,4 @@
+{{--
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
         <div class="navbar-header">
@@ -52,5 +53,57 @@
                 @endif
             </ul>
         </div>
+    </div>
+</nav>--}}
+
+<nav class="grey lighten-4" role="navigation">
+    <div class="nav-wrapper section-nav">
+        <a href="{{ url('/') }}" class="brand-logo logo-menu">Deebly</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down menu-1">
+            @if (Auth::guest())
+                <li><a href="{{ route('login') }}">Se connecter</a></li>
+                <li><a href="{{ route('register') }}">S'inscrire</a></li>
+            @else
+                <li>
+                    <a href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                        Deconnection
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </li> @endif
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            @if(Auth::check())
+            <li><div class="userView">
+                    <div class="background">
+                        <img src="{{ asset('images/office.jpg')}}">
+                    </div>
+                    {{--<a href="#!user"><img class="circle" src="{{Gravatar::get('alexis.bougy@gmail.com', 'default');}}"></a>--}}
+                    <a href="#!name"><span class="white-text name">{{ Auth::user()->name }}</span></a>
+                    <a href="#!email"><span class="white-text email">{{ Auth::user()->email }}</span></a>
+                </div></li>
+            @endif
+            @if (Auth::guest())
+                <li><a href="{{ route('login') }}">Se connecter</a></li>
+                <li><a href="{{ route('register') }}">S'inscrire</a></li>
+            @else
+                <li>
+                    <a href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                        Deconnection
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </li>
+            @endif
+        </ul>
     </div>
 </nav>

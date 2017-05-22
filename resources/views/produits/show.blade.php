@@ -3,7 +3,13 @@
 
 @section('content')
     <div class="section-40">
+
         <div class="container">
+            <form action="{{route('deleteProduit',['id'=>$renderProduct->id])}}" method="post">
+                {{csrf_field()}}
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" name="submit" value="Supprimer">
+            </form>
             <h1>{{$renderProduct->title}}</h1>
             <p>Ajouter le {{$renderProduct->created_at->toFormattedDateString()}}</p>
             <hr>
