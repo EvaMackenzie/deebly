@@ -83,7 +83,7 @@
                     <div class="background">
                         <img src="{{ asset('images/office.jpg')}}">
                     </div>
-                    {{--<a href="#!user"><img class="circle" src="{{Gravatar::get('alexis.bougy@gmail.com', 'default');}}"></a>--}}
+                    <a href="#!user"><img class="circle" src="{{ Gravatar::src(Auth::user()->email) }}"></a>
                     <a href="#!name"><span class="white-text name">{{ Auth::user()->name }}</span></a>
                     <a href="#!email"><span class="white-text email">{{ Auth::user()->email }}</span></a>
                 </div></li>
