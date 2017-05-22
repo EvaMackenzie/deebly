@@ -27,5 +27,6 @@ Route::get('/produits', 'ProductsController@index');
 Route::get('/produits/create', 'ProductsController@create');
 Route::get('/produits/{renderProduct}', 'ProductsController@show');
 Route::post('/produits', 'ProductsController@store');
+Route::delete('/produits/{id}/delete', 'ProductsController@destroy')->name('deleteProduit');
 
 Route::resource('annonce','AnnonceController');

@@ -26,4 +26,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function products(){
+        return $this->hasMany('App\Products'); // pour page profil ( permet de lier deux modeles ss avoir a faire dappel permet dans controlleur.
+        //affiche tous les annonces users etc
+       /* $products = Auth::user()->product();
+        foreach ($products as $product){
+        }*/
+    }
 }

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Products;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
+use Intervention\Image\Facades\Image;
 
 class ProductsController extends Controller
 {
@@ -33,22 +36,31 @@ class ProductsController extends Controller
         return view('produits.create');
     }
 
-    public function store() {
+    public function store()
+    {
         //dd(request()->all());
-
+        $user = Auth::user()->id;
         //$produit = new Products;
         $this->validate(request(), [
             'nameProduct' => 'required|max:10',
             'descProduct' => 'required',
             'priceProduct' => 'required',
+            'picture' => 'required',
         ]);
 
+        $file = Input::file('picture');
+        $extension = $file->getClientOriginalExtension();//
+        $filename = rand(1111111, 9999999) . '.' . $extension;
+
+        Image::make($file)->save(public_path('/uploads/images/' . $filename));
 
 
         Products::create([
             'title' => request('nameProduct'),
             'description' => request('descProduct'),
-            'price' => request('priceProduct')
+            'price' => request('priceProduct'),
+            'picture_url' => $filename,
+            'user_id' => $user,
             //'user_id'  => Auth::user()->id
         ]);
 
@@ -57,4 +69,24 @@ class ProductsController extends Controller
         return redirect('/produits');
     }
 
+
+    public function destroy($id)
+    {
+        $id_product = $id;
+        $products = Products::where('id', '=', $id)->get();
+
+        foreach ($products as $product) {
+            $image_product = $product->picture_url;
+            $path_image = public_path() . '/uploads/images/' . $image_product;
+            unlink($path_image);
+            $product->delete();
+        }
+
+        return back();
+    }
+}
+/*
+
+
+}
 }

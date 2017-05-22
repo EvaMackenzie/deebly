@@ -5,7 +5,7 @@
     <div class="container">
         <h1>Creer un produit</h1>
         @include('layouts.errors')
-        <form method="post" action="/produits" class="form-horizontal">
+        <form method="post" action="/produits" class="form-horizontal" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="nameProduct" class="col-sm-2 control-label">Nom du produit</label>
@@ -23,6 +23,13 @@
                 <label for="priceProduct" class="col-sm-2 control-label">Prix</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="priceProduct"  name="priceProduct">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="pictureProduct">Image</label>
+                <div class="col-sm-10">
+                    <input type="file" id="pictureProduct" class="form-control" name="picture">
                 </div>
             </div>
             <div class="form-group">

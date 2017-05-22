@@ -381,43 +381,21 @@
                         </div>
 
 
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a href="{{ asset('home/images/product_1.jpg') }}" class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="{{ asset('home/images/product_1.jpg') }}" alt="Free HTML5 Responsive Template" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Product Name</h3>
-                                <p class="fh5co-figure-text">Far far away behind the word mountains</p>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a href="{{ asset('home/images/product_2.jpg') }}" class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="{{ asset('home/images/product_2.jpg') }}" alt="Free HTML5 Responsive Template" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Product Name</h3>
-                                <p class="fh5co-figure-text">Far far away behind the word mountains</p>
-                            </a>
-                        </div>
-                        <div class="clearfix visible-sm-block"></div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a href="{{ asset('home/images/product_3.jpg') }}" class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="{{ asset('home/images/product_3.jpg') }}" alt="Free HTML5 Responsive Template" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Product Name</h3>
-                                <p class="fh5co-figure-text">Far far away behind the word mountains</p>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a href="{{ asset('home/images/product_4.jpg') }}" class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="{{ asset('home/images/product_4.jpg') }}" alt="Free HTML5 Responsive Template" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Product Name</h3>
-                                <p class="fh5co-figure-text">Far far away behind the word mountains</p>
-                            </a>
-                        </div>
+                        @foreach($products as $product)
+
+
+                            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                                <a href="#" class="fh5co-figure to-animate image-popup">
+                                    <figure>
+                                        <img src="uploads/images/{{$product->picture_url}}" alt="Free HTML5 Responsive Template" class="img-responsive">
+                                    </figure>
+                                    <h3 class="fh5co-figure-lead">{{$product->title}}</h3>
+                                    <p class="fh5co-figure-text">{{$product->description}}</p>
+                                </a>
+                            </div>
+
+                        @endforeach
+
 
                         <div class="clearfix visible-sm-block"></div>
 
