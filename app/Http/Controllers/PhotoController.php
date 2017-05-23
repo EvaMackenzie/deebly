@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Products;
 use Illuminate\Support\Facades\DB;
 
 class PhotoController extends Controller
@@ -14,12 +15,14 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        $products = DB::table('products')
+        $products = Products::latest()->take(4)->get();
+        return view('homepage.index', compact('products'));
+       /* $products = DB::table('products')
             ->orderBy('id','desc')
             ->limit(4)
             ->get();
 
-        return view('homepage.index',['products' => $products]);
+        return view('homepage.index',['products' => $products]);*/
     }
 
     /**

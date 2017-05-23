@@ -390,7 +390,8 @@
                                         <img src="uploads/images/{{$product->picture_url}}" alt="Free HTML5 Responsive Template" class="img-responsive">
                                     </figure>
                                     <h3 class="fh5co-figure-lead">{{$product->title}}</h3>
-                                    <p class="fh5co-figure-text">{{$product->description}}</p>
+                                    <p class="fh5co-figure-text">{{$product->created_at->diffForHumans() }}</p>
+                                    <p class="fh5co-figure-text">{{$product->price}}€</p>
                                 </a>
                             </div>
 
