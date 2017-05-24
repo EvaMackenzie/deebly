@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+{{--
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -43,4 +44,48 @@
         </div>
     </div>
 </div>
+--}}
+
+
+<section class="back-login">
+    <div class="container section-40">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="card white">
+                    <div class="card-content">
+                        <h1 class="text-center">Mot de passe oublié</h1>
+                        @if (session('status'))
+                            <div class="alert alert-success">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+                        <form class="" role="form" method="POST" action="{{ route('password.email') }}">
+                            {{ csrf_field() }}
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <div class="{{ $errors->has('email') ? 'has-error' : '' }}">
+                                        <input id="email" type="email" name="email" class="validate" value="{{ old('email') }}" required autofocus>
+                                        <label for="email">Votre email</label>
+                                        @if ($errors->has('email'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <button type="submit" class="btn btn-primary">
+                                        Envoyer le lien de regeneration
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
