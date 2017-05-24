@@ -18,6 +18,10 @@
 	padding-bottom:40px;
 }
 
+.fix-margin-dropdown {
+	margin-top: -20px;
+}
+
 
 
 .section-top-40 {
@@ -129,4 +133,35 @@ nav .brand-logo {
 	&:hover {
 		text-decoration: none;
 	}
+}
+
+.max-w-35 {
+	max-width: 35px!important;
+	margin-right: 10px;
+}
+
+.padding-profile-pic {
+	padding: 9px 0 !important;
+
+}
+
+.fix-margin-dropdown {
+	margin-top: -14px;
+}
+
+.dropdown-menu-fix {
+	li {
+		margin-right: 0;
+		margin-left: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+
+		& a:hover {
+			border-bottom: 6px solid transparent;
+		}
+	}
+}
+
+#dropdown1 {
+	margin-top: 11px;
 }

@@ -55,6 +55,20 @@
         </div>
     </div>
 </nav>--}}
+<ul id="dropdown1" class="dropdown-content dropdown-menu-fix">
+    <li><a href="#!"><i class="material-icons">person_pin</i>Mon profil</a></li>
+    <li><a href="#!"><i class="material-icons">settings</i>Paramètres</a></li>
+    <li class="divider"></li>
+    <li> <a class="deconnection" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+            <i class="material-icons">not_interested</i>Quitter
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+        </form>
+    </li>
+</ul>
 
 <nav class="grey lighten-4" role="navigation">
     <div class="nav-wrapper section-nav">
@@ -65,7 +79,7 @@
                 <li><a href="{{ route('login') }}">Se connecter</a></li>
                 <li><a href="{{ route('register') }}">S'inscrire</a></li>
             @else
-                <li>
+               {{-- <li>
                     <a class="deconnection" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
@@ -75,7 +89,11 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
                     </form>
-                </li> @endif
+                </li>--}}
+                <li><a class="dropdown-button padding-profile-pic" href="#!" data-activates="dropdown1"><img src="{{ Gravatar::src(Auth::user()->email) }}" alt="" class="circle max-w-35">{{ Auth::user()->name }}<i class="material-icons right fix-margin-dropdown">arrow_drop_down</i></a></li>
+
+            @endif
+
         </ul>
         <ul class="side-nav" id="mobile-demo">
             @if(Auth::check())
@@ -92,7 +110,7 @@
                 <li><a href="{{ route('login') }}">Se connecter</a></li>
                 <li><a href="{{ route('register') }}">S'inscrire</a></li>
             @else
-                <li>
+                {{--<li>
                     <a href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
@@ -102,7 +120,19 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
                     </form>
-                </li>
+                </li>--}}
+                    <li><a href="#!"><i class="material-icons">person_pin</i>Mon profil</a></li>
+                    <li><a href="#!"><i class="material-icons">settings</i>Paramètres</a></li>
+                    <li class="divider"></li>
+                    <li> <a class="deconnection" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                            <i class="material-icons">not_interested</i>Quitter
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
             @endif
         </ul>
     </div>

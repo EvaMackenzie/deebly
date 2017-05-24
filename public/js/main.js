@@ -72,9 +72,13 @@
 
 $(document).ready(function () {
     $(".button-collapse").sideNav();
+    $(".dropdown-button").dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        //hover: true, // Activate on hover
+        belowOrigin: true });
+    $('.tooltipped').tooltip({ delay: 50 });
 });
-
-$(".dropdown-button").dropdown();
 
 /***/ }),
 /* 1 */,
