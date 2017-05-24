@@ -13,6 +13,7 @@
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+<link href="{{ asset('css/images.css') }}" rel="stylesheet">
 
 <!-- Scripts -->
 <script>
