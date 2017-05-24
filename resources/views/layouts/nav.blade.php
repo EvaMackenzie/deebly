@@ -58,7 +58,7 @@
 
 <nav class="grey lighten-4" role="navigation">
     <div class="nav-wrapper section-nav">
-        <a href="{{ url('/') }}" class="brand-logo logo-menu">Deebly</a>
+        <a href="{{ url('/') }}" class="brand-logo logo-menu logo-menu-deebly"><span class="">Deebly</span></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down menu-1">
             @if (Auth::guest())

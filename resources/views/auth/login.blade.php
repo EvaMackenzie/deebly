@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('pageTitle', 'Se connecter')
 @section('content')
 {{--
 <div class="container">

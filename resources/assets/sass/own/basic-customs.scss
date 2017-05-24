@@ -89,3 +89,22 @@ nav .brand-logo {
 		text-decoration: none;
 	}
 }}
+
+.logo-menu-deebly {
+
+	& span {
+		border: 2px solid #444;
+		color: #444;
+		padding: 7px 10px 7px 12px;
+		font-size: 20px;
+		font-family: 'Montserrat', sans-serif;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+
+	&:hover {
+		text-decoration: none;
+	}
+}
