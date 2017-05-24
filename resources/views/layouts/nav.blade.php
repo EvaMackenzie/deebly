@@ -66,7 +66,7 @@
                 <li><a href="{{ route('register') }}">S'inscrire</a></li>
             @else
                 <li>
-                    <a href="{{ route('logout') }}"
+                    <a class="deconnection" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                         Deconnection
