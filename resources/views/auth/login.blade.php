@@ -122,7 +122,7 @@
                                 Connexion
                             </button>
 
-                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                            <a class="btn btn-primary" href="{{ route('password.request') }}">
                                 Mot de passe oublié ?
                             </a>
                         </div>
