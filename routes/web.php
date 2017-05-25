@@ -23,13 +23,13 @@ Route::get('/', 'PhotoController@index');
 
 //Route::resource('profil','ProfileController');
 
-Route::get('/produits', 'ProductsController@index');
+/*Route::get('/produits', 'ProductsController@index');
 Route::get('/produits/create', 'ProductsController@create');
 Route::get('/produits/{renderProduct}', 'ProductsController@show');
 Route::post('/produits', 'ProductsController@store');
-Route::delete('/produits/{id}/delete', 'ProductsController@destroy')->name('deleteProduit');
+Route::delete('/produits/{id}/delete', 'ProductsController@destroy')->name('deleteProduit');*/
 
-
+route::resource('produits', 'ProductsController');
 Route::get('/profil', 'ProfileController@index');
 
-Route::resource('annonce','AnnonceController');
+//Route::resource('annonce','AnnonceController');

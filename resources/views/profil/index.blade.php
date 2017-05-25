@@ -68,12 +68,26 @@
                         </tr>
                         </thead>
                         <tbody>
+                        @foreach($myProducts as $product)
                         <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
-                            <td>$0.87</td>
+
+                            <td>{{$product->title}}</td>
+                            <td>{{$product->created_at->toFormattedDateString()}}</td>
+                            <td><a href="{{route('produits.edit',$product)}}" class="waves-effect waves-light btn white-text"><i class="material-icons left">mode_edit</i>Modifer</a>
+                            </td>
+                            <td>
+
+                                {{--<a href="{{route('produits.destroy', $product)}}" class="waves-effect waves-light btn red white-text"><i class="material-icons left">delete</i>Supprimer</a>--}}
+                                <form action="{{route('produits.destroy',$product)}}" method="post">
+                                    {{csrf_field()}}
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="waves-effect waves-light btn red white-text"><i class="material-icons left">delete</i>Supprimer</button>
+                                    {{--<input type="submit" name="submit" value="Supprimer">--}}
+                                </form>
+                            </td>
+
                         </tr>
+                        @endforeach
                         </tbody>
                     </table>
                         </div>

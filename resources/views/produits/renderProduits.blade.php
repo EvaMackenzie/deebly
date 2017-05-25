@@ -24,7 +24,7 @@
        --}} </div>
         <div class="card-content">
             <div class="card-content-title">
-                <a href="/produits/{{$product->id}}"><h3>{{$product->title}}</h3></a>
+                <a href="{{route('produits.show',$product)}}"><h3>{{$product->title}}</h3></a>
             </div>
             <p>{{$product->created_at->diffForHumans() }}</p>
             <p>{{$product->price}}€</p>

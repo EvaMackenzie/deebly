@@ -24,10 +24,10 @@ class ProductsController extends Controller
         return view('produits.index', compact('renderProducts'));
     }
 
-    public function show(Products $renderProduct)
+    public function show($id)
     {
 
-        //$renderProduct =  Products::find($id);
+        $renderProduct =  Products::findOrFail($id);
         return view('produits.show', compact('renderProduct'));
     }
 
@@ -42,7 +42,7 @@ class ProductsController extends Controller
         $user = Auth::user()->id;
         //$produit = new Products;
         $this->validate(request(), [
-            'nameProduct' => 'required|max:10',
+            'nameProduct' => 'required|max:30',
             'descProduct' => 'required',
             'priceProduct' => 'required',
             'picture' => 'required',
@@ -70,19 +70,59 @@ class ProductsController extends Controller
     }
 
 
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $product   = Products::find($id);
+        return view('produits.edit')->with(compact('product'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'nameProduct' => 'required|max:30',
+            'descProduct' => 'required',
+            'priceProduct' => 'required',
+        ]);
+        $productUpdate = Products::findOrFail($id);
+
+        $productUpdate->update([
+            'title' => $request->nameProduct,
+            'description' => $request->descProduct,
+            'price' => $request->priceProduct,
+        ]);
+        return redirect()->route('produits.show', $productUpdate);
+    }
+
+
+
     public function destroy($id)
     {
-        $id_product = $id;
-        $products = Products::where('id', '=', $id)->get();
+        //$id_product = $id;
+        //$products = Products::where('id', '=', $id)->get();
 
-        foreach ($products as $product) {
+        /*foreach ($products as $product) {
             $image_product = $product->picture_url;
             $path_image = public_path() . '/uploads/images/' . $image_product;
             unlink($path_image);
-            $product->delete();
-        }
 
+        }*/
+        $products = Products::find($id);
+        $products->delete();
         return back();
+
     }
 }
 /*

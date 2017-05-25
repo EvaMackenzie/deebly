@@ -23,8 +23,11 @@ class ProfileController extends Controller
      */
     public function index()
     {
+        $user = Auth::id();
+        $myProducts = Products::where("user_id", "=", $user)->latest()->get();
+        //dd($myProducts);
         $myProfil=Auth::user();
-        return view('profil.index')->with(compact('myProfil'));
+        return view('profil.index')->with(compact('myProfil', 'myProducts'));
     }
 
     /**
