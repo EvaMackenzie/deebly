@@ -96,3 +96,22 @@
   font-size: 24px;
   font-weight: 600;
 }
+
+.profile-infos-margin {
+  margin-left: 38px;
+  margin-top: 20px;
+}
+
+.profile-infos-bloc {
+  margin-top: 50px;
+}
+
+.profile-sidebar-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  & a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
