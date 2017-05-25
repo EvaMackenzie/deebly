@@ -29,4 +29,7 @@ Route::get('/produits/{renderProduct}', 'ProductsController@show');
 Route::post('/produits', 'ProductsController@store');
 Route::delete('/produits/{id}/delete', 'ProductsController@destroy')->name('deleteProduit');
 
+
+Route::get('/profil', 'ProfileController@index');
+
 Route::resource('annonce','AnnonceController');

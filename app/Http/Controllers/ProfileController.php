@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\User;
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -19,8 +22,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        //$profil=Auth::user();
-       // return view('profil.index')->with(compact('profil'));
+        $myProfil=Auth::user();
+        return view('profil.index')->with(compact('myProfil'));
     }
 
     /**
