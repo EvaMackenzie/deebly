@@ -61,6 +61,7 @@
 	line-height: 24px;
 	-webkit-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
+	padding-top: 7px;
 
 	&:hover {
 		border-bottom: 6px solid transparent;
@@ -164,4 +165,13 @@ nav .brand-logo {
 
 #dropdown1 {
 	margin-top: 11px;
+}
+
+.side-nav li>a>i, .side-nav li>a>[class^="mdi-"], .side-nav li>a li>a>[class*="mdi-"], .side-nav li>a>i.material-icons {
+	float: left;
+	height: 48px;
+	line-height: 24px;
+	margin: 0px 16px 0 0;
+	width: 24px;
+	color: rgba(0,0,0,0.54);
 }

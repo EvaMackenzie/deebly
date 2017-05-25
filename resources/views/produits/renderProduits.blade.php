@@ -16,13 +16,16 @@
 
 <div class="col-md-4">
     <div class="card">
-        <div class="card-image">
-            <img src="/uploads/images/{{$product->picture_url}}">
-            {{--<span class="card-title">{{$product->title}}</span>--}}
+        <div class="card-image card-image-crop">
+            <span class="card-image-helper"></span>
+            <img src="/uploads/images/{{$product->picture_url}}" class="card-image-vertical">
+            {{--<span class="card-title">{{$product->title}}</span>
             <a class="btn-floating halfway-fab waves-effect waves-light teal" href="/produits/{{$product->id}}"><i class="material-icons">visibility</i></a>
-        </div>
+       --}} </div>
         <div class="card-content">
-            <h4>{{$product->title}}</h4>
+            <div class="card-content-title">
+                <a href="/produits/{{$product->id}}"><h3>{{$product->title}}</h3></a>
+            </div>
             <p>{{$product->created_at->diffForHumans() }}</p>
             <p>{{$product->price}}€</p>
         </div>
@@ -35,5 +38,9 @@
                 <input type="submit" name="submit" value="Supprimer">
             </form>
         </div>--}}
+        <div class="card-action card-action-custom">
+            <a href="#" class=""><i class="material-icons">add</i></a>
+            <a href="#" class="pull-right card-action-link">Lire plus</a>
+        </div>
     </div>
 </div>

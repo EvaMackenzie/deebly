@@ -58,8 +58,7 @@
 <ul id="dropdown1" class="dropdown-content dropdown-menu-fix">
     <li><a href="#!"><i class="material-icons">person_pin</i>Mon profil</a></li>
     <li><a href="#!"><i class="material-icons">settings</i>Paramètres</a></li>
-    <li class="divider"></li>
-    <li> <a class="deconnection" href="{{ route('logout') }}"
+    <li> <a href="{{ route('logout') }}"
             onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
             <i class="material-icons">not_interested</i>Quitter
@@ -123,8 +122,7 @@
                 </li>--}}
                     <li><a href="#!"><i class="material-icons">person_pin</i>Mon profil</a></li>
                     <li><a href="#!"><i class="material-icons">settings</i>Paramètres</a></li>
-                    <li class="divider"></li>
-                    <li> <a class="deconnection" href="{{ route('logout') }}"
+                    <li> <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                             <i class="material-icons">not_interested</i>Quitter
