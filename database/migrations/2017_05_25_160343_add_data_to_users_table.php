@@ -15,12 +15,12 @@ class AddDataToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->dateTime('date_of_birth');
-            $table->string('tel')->unique();
-            $table->text('description');
-            $table->string('adresse');
-            $table->string('ville');
-            $table->string('cp');
+            $table->dateTime('date_of_birth')->nullable();
+            $table->string('tel')->unique()->nullable();
+            $table->text('description')->nullable();
+            $table->string('adresse')->nullable();
+            $table->string('ville')->nullable();
+            $table->string('cp')->nullable();
         });
     }
 

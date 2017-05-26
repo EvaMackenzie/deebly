@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Categories;
 
 class CategoriesController extends Controller
 {
@@ -14,7 +15,8 @@ class CategoriesController extends Controller
     public function index()
     {
         //
-        return view ('categories.index');
+        $allCategories = Categories::all();
+        return view ('categories.index', compact('allCategories'));
     }
 
     /**
@@ -25,17 +27,28 @@ class CategoriesController extends Controller
     public function create()
     {
         //
+        return view ('categories.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     *
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        //dd($request->nameCategorie);
+        $this->validate(request(), [
+            'nameCategorie' => 'required',
+        ]);
+
+        Categories::create([
+           'name' => request('nameCategorie')
+        ]);
+
+        return redirect('/categories');
+
     }
 
     /**
