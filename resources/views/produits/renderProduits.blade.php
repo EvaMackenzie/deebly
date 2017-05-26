@@ -29,8 +29,9 @@
             <p>{{$product->created_at->diffForHumans() }}</p>
             <p>{{$product->price}}€</p>
 
-
-            <p>{{$product->categorie_id->name}}</p>
+            @if($product->categories)
+                <p>{{$product->categories}}</p>
+            @endif
         </div>
        {{-- <div class="card-action">
             <a href="/produits/{{$product->id}}">Voir</a>

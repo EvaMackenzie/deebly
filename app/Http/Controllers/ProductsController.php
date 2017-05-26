@@ -20,7 +20,8 @@ class ProductsController extends Controller
     public function index()
     {
         //$renderProducts = Products::latest()->get();
-        $renderProducts = Products::latest()->paginate(6);
+        $renderProducts = Products::latest()->with('categories')->paginate(6);
+       //$renderProducts->load('categories');
         //dd($renderProducts);
         return view('produits.index', compact('renderProducts'));
     }
