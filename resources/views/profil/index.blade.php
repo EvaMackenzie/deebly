@@ -33,7 +33,7 @@
                                 <h5><i class="small material-icons vmiddle">person_pin</i> Informations</h5>
                                 <div class="profile-infos-margin">
                                     <p>Nom : {{$myProfil->name}}</p>
-                                    <p>Anniversaire :</p>
+                                    <p>Anniversaire : </p>
                                     <p>Email : {{$myProfil->email}}</p>
                                     <p>Téléphone : </p>
 

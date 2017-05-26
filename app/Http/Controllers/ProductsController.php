@@ -78,8 +78,14 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
+        $user = Auth::user()->id;
         $product   = Products::find($id);
-        return view('produits.edit')->with(compact('product'));
+        //dd($user);
+        if ($user == $product->user_id) {
+            return view('produits.edit')->with(compact('product'));
+        } else {
+            return view('produits.errorEdit');
+        }
     }
 
     /**

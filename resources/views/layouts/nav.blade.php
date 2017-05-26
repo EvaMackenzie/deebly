@@ -56,7 +56,7 @@
     </div>
 </nav>--}}
 <ul id="dropdown1" class="dropdown-content dropdown-menu-fix">
-    <li><a href="#!"><i class="material-icons">person_pin</i>Mon profil</a></li>
+    <li><a href="{{ route('profil.index') }}"><i class="material-icons">person_pin</i>Mon profil</a></li>
     <li><a href="#!"><i class="material-icons">settings</i>Paramètres</a></li>
     <li> <a href="{{ route('logout') }}"
             onclick="event.preventDefault();
@@ -89,6 +89,7 @@
                         {{ csrf_field() }}
                     </form>
                 </li>--}}
+                <li><a href="{{ route('produits.index') }}">Produits</a></li>
                 <li><a class="dropdown-button padding-profile-pic" href="#!" data-activates="dropdown1"><img src="{{ Gravatar::src(Auth::user()->email) }}" alt="" class="circle max-w-35">{{ Auth::user()->name }}<i class="material-icons right fix-margin-dropdown">arrow_drop_down</i></a></li>
 
             @endif
@@ -120,7 +121,8 @@
                         {{ csrf_field() }}
                     </form>
                 </li>--}}
-                    <li><a href="#!"><i class="material-icons">person_pin</i>Mon profil</a></li>
+                    <li><a href="{{ route('produits.index') }}"><i class="material-icons">shopping_basket</i>Produits</a></li>
+                    <li><a href="{{ route('profil.index') }}"><i class="material-icons">person_pin</i>Mon profil</a></li>
                     <li><a href="#!"><i class="material-icons">settings</i>Paramètres</a></li>
                     <li> <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
@@ -131,6 +133,7 @@
                             {{ csrf_field() }}
                         </form>
                     </li>
+
             @endif
         </ul>
     </div>

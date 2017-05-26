@@ -30,6 +30,6 @@ Route::post('/produits', 'ProductsController@store');
 Route::delete('/produits/{id}/delete', 'ProductsController@destroy')->name('deleteProduit');*/
 
 route::resource('produits', 'ProductsController');
-Route::get('/profil', 'ProfileController@index');
-
+//Route::get('/profil', 'ProfileController@index');
+Route::resource('profil', 'ProfileController');
 //Route::resource('annonce','AnnonceController');
