@@ -15,6 +15,14 @@
                     <input type="text" class="form-control" id="nameProduct" name="nameProduct" value="{{$product->title}}">
                 </div>
             </div>
+            {{--categories rajoutées--}}
+            <div class="form-group">
+                <label for="nameProduct" class="col-sm-2 control-label">Categories</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nameCategories" name="nameCategories">
+                </div>
+            </div>
+
             <div class="form-group">
                 <label for="descProduct" class="col-sm-2 control-label">Description</label>
                 <div class="col-sm-10">

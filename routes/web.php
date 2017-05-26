@@ -33,3 +33,4 @@ route::resource('produits', 'ProductsController');
 //Route::get('/profil', 'ProfileController@index');
 Route::resource('profil', 'ProfileController');
 //Route::resource('annonce','AnnonceController');
+Route::resource('categories', 'CategoriesController');

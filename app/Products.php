@@ -13,4 +13,9 @@ class Products extends Model
     public function user(){
         return $this->belongsTo('App\User');
     }
+
+    //model ->lien des produits aux categories
+    public function categories(){
+        return $this->belongsTo('App\Categories');
+    }
 }
