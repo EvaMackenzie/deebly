@@ -7,5 +7,6 @@ $( document ).ready(function(){
         belowOrigin: true, // Displays dropdown below the button
     });
     $('.tooltipped').tooltip({delay: 50});
+    $('select').material_select();
 });
 

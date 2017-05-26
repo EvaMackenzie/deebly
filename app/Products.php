@@ -2,12 +2,12 @@
 
 namespace App;
 
-//use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 
 class Products extends Model
 {
     protected $fillable = [
-        'title', 'description', 'picture_url', 'price', 'user_id'
+        'title', 'description', 'picture_url', 'price', 'user_id', 'categorie_id'
     ];
 
     public function user(){

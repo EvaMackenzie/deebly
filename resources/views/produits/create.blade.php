@@ -14,13 +14,23 @@
                 </div>
             </div>
 
-            {{--categories rajoutées--}}
             <div class="form-group">
+                    <label for="catProduct" class="col-sm-2 control-label">Catégorie</label>
+                    <select class="col-sm-10" name="catProduct">
+                        @foreach($allCat as $cat)
+                            <option value="{{$cat->id}}">{{$cat->name}}</option>
+                        @endforeach
+                    </select>
+            </div>
+
+
+            {{--categories rajoutées--}}
+           {{-- <div class="form-group">
                 <label for="nameProduct" class="col-sm-2 control-label">Categories</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="nameCategories" name="nameCategories">
                 </div>
-            </div>
+            </div>--}}
 
             <div class="form-group">
                 <label for="descProduct" class="col-sm-2 control-label">Description</label>

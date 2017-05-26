@@ -78,6 +78,7 @@ $(document).ready(function () {
         //hover: true, // Activate on hover
         belowOrigin: true });
     $('.tooltipped').tooltip({ delay: 50 });
+    $('select').material_select();
 });
 
 /***/ }),

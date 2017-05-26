@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Products;
+use App\Categories;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Intervention\Image\Facades\Image;
@@ -33,12 +34,13 @@ class ProductsController extends Controller
 
     public function create()
     {
-
-        return view('produits.create');
+        $allCat = Categories::all();
+        return view('produits.create', compact('allCat'));
     }
 
     public function store()
     {
+
         //dd(request()->all());
         $user = Auth::user()->id;
         //$produit = new Products;
@@ -47,6 +49,7 @@ class ProductsController extends Controller
             'descProduct' => 'required',
             'priceProduct' => 'required',
             'picture' => 'required',
+            'catProduct' => 'required',
         ]);
 
         $file = Input::file('picture');
@@ -62,6 +65,7 @@ class ProductsController extends Controller
             'price' => request('priceProduct'),
             'picture_url' => $filename,
             'user_id' => $user,
+            'categorie_id' => request('catProduct'),
             //'user_id'  => Auth::user()->id
         ]);
 
