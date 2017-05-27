@@ -416,61 +416,53 @@
 
             </div>
 
-            {{--<div id="fh5co-features-3" data-section="benefits">
+            <div id="fh5co-features-3" data-section="benefits">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-                            <h2 class="fh5co-lead animate-single features3-animate-1">Benefits of this App</h2>
-                            <p class="fh5co-sub animate-single features3-animate-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <h2 class="fh5co-lead animate-single features3-animate-1">Louer du matériel estival
+                            </h2>
                         </div>
 
-                        <div class="col-md-4 col-sm-6 text-center fh5co-text-wrap">
+                        <div class="col-sm-6 text-center fh5co-text-wrap">
                             <div class="fh5co-text to-animate">
-                                <span class="fh5co-icon"><i class="icon-screen-desktop"></i></span>
-                                <h4 class="fh5co-uppercase-sm">Cross platform support</h4>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <span class="fh5co-icon"><i class="icon-support"></i></span>
+                                <h4 class="fh5co-uppercase-sm">Etape 1 : Trouvez le matériel qu’il vous faut</h4>
+                                <p>
+                                    Choisissez quel type de matériel vous voulez parmi 3 catégories : Mer, Montagne et Urbain.
+                                </p>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 text-center fh5co-text-wrap">
+                        <div class="col-sm-6 text-center fh5co-text-wrap">
                             <div class="fh5co-text to-animate">
-                                <span class="fh5co-icon"><i class="icon-graph"></i></span>
-                                <h4 class="fh5co-uppercase-sm">Cross platform support</h4>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                        </div>
-
-                        <div class="clearfix visible-sm-block"></div>
-
-                        <div class="col-md-4 col-sm-6 text-center fh5co-text-wrap">
-                            <div class="fh5co-text to-animate">
-                                <span class="fh5co-icon"><i class="icon-anchor"></i></span>
-                                <h4 class="fh5co-uppercase-sm">Cross platform support</h4>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-sm-6 text-center fh5co-text-wrap">
-                            <div class="fh5co-text to-animate">
-                                <span class="fh5co-icon"><i class="icon-camera"></i></span>
-                                <h4 class="fh5co-uppercase-sm">Cross platform support</h4>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <span class="fh5co-icon"><i class="icon-plus"></i></span>
+                                <h4 class="fh5co-uppercase-sm">Etape 2 : Faites votre demande de location</h4>
+                                <p>
+                                    Indiquez la date de location souhaitée et procédez au paiement pour valider votre demande. Vous serez débité uniquement si le propriétaire accepte votre réservation. La caution ne sera pas débitée.
+                                </p>
                             </div>
                         </div>
 
                         <div class="clearfix visible-sm-block"></div>
 
-                        <div class="col-md-4 col-sm-6 text-center fh5co-text-wrap">
+                        <div class="col-sm-6 text-center fh5co-text-wrap">
                             <div class="fh5co-text to-animate">
-                                <span class="fh5co-icon"><i class="icon-present"></i></span>
-                                <h4 class="fh5co-uppercase-sm">Cross platform support</h4>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <span class="fh5co-icon"><i class="icon-heart"></i></span>
+                                <h4 class="fh5co-uppercase-sm">Etape 3 : Demande de location validée
+                                </h4>
+                                <p>
+                                    Une fois validée, vous recevrez l’adresse du lieu de rendez vous ainsi que le numéro du propriétaire pour fixer les derniers détails.
+                                </p>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 text-center fh5co-text-wrap">
+                        <div class="col-sm-6 text-center fh5co-text-wrap">
                             <div class="fh5co-text to-animate">
-                                <span class="fh5co-icon"><i class="icon-energy"></i></span>
-                                <h4 class="fh5co-uppercase-sm">Cross platform support</h4>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <span class="fh5co-icon"><i class="icon-like"></i></span>
+                                <h4 class="fh5co-uppercase-sm">Etape 4 : Jouez !
+                                </h4>
+                                <p>
+                                    Une fois la location du matériel terminée et le matériel rendu, évaluez votre expérience avec le propriétaire en lui attribuant une note ou commentaire.
+                                </p>
                             </div>
                         </div>
 
@@ -478,7 +470,7 @@
 
                     </div>
                 </div>
-            </div>--}}
+            </div>
 
             <div class="fh5co-bg-section cta" id="fh5co-cta" style="background-image: url('../home/images/own/petanque.jpg'); background-attachment: fixed;">
                 <div class="fh5co-overlay"></div>
