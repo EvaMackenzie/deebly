@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class ReservationController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +19,10 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        dd('redirect ok');
+        $user = Auth::user()->id;
+        $mesReservations = Reservation::latest()->where('locataire_id', $user)->get();
+        //dd($mesReservations);
+        return view('reservation.index', compact('mesReservations'));
     }
 
     /**
@@ -61,7 +68,15 @@ class ReservationController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = Auth::user()->id;
+        $renderReservation =  Reservation::findOrFail($id);
+        //dd($renderReservation->locataire_id);
+        if($user == $renderReservation->locataire_id) {
+            return view('reservation.show', compact('renderReservation'));
+        } else {
+            return view('reservation.error');
+        }
+
     }
 
     /**
@@ -95,6 +110,11 @@ class ReservationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $products = Reservation::find($id);
+        $products->delete();
+        $user = Auth::user()->id;
+        $mesReservations = Reservation::latest()->where('locataire_id', $user)->get();
+        //dd($mesReservations);
+        return redirect()->route('reservation.index', compact('mesReservations'));
     }
 }

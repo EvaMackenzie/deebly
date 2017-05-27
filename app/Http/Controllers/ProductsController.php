@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Products;
 use App\Categories;
+use App\Reservation;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Intervention\Image\Facades\Image;
@@ -30,7 +31,15 @@ class ProductsController extends Controller
     {
 
         $renderProduct =  Products::findOrFail($id);
-        return view('produits.show', compact('renderProduct'));
+        //dd($renderProduct->id);
+        $reservation = Reservation::where('product_id', $renderProduct->id)->first();
+        //dd($reservation);
+        if (empty($reservation)) {
+            $isReserved = 0;
+        } else {
+            $isReserved = 1;
+        }
+        return view('produits.show', compact('renderProduct', 'isReserved'));
     }
 
     public function create()

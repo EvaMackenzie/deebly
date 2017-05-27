@@ -19,7 +19,11 @@ class Products extends Model
         return $this->belongsTo('App\Categories', 'categorie_id');
     }
 
-    public function reservation(){
+    /*public function reservation(){
         return $this->belongsTo(Reservation::class, 'product_id');
-    }
+    }*/
+
+    public function reservation(){
+    return $this->hasMany(Reservation::class);
+}
 }

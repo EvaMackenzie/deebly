@@ -10,7 +10,15 @@ class Reservation extends Model
         'product_id', 'user_product_id', 'locataire_id'
     ];
 
-    public function products(){
+    /*public function products(){
         return $this->hasMany(Products::class);
+    }*/
+
+    public function products(){
+        return $this->belongsTo(Products::class, 'product_id');
+    }
+
+    public function users(){
+        return $this->belongsTo(User::class, 'user_product_id');
     }
 }

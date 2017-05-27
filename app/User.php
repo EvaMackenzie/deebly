@@ -34,4 +34,7 @@ class User extends Authenticatable
         foreach ($products as $product){
         }*/
     }
+    public function reservation(){
+        return $this->hasMany(Reservation::class);
+    }
 }
