@@ -20,6 +20,7 @@ Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index');
 Route::get('/', 'PhotoController@index');
+Route::get('/mentions-legales', 'PhotoController@ml');
 
 //Route::resource('profil','ProfileController');
 

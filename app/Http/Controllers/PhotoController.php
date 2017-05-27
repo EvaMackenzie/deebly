@@ -25,6 +25,10 @@ class PhotoController extends Controller
         return view('homepage.index',['products' => $products]);*/
     }
 
+    public function ml() {
+        return view('homepage.ml');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
