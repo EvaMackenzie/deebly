@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+//use Illuminate\Database\Eloquent\Model;
 
 class Products extends Model
 {
@@ -11,11 +11,11 @@ class Products extends Model
     ];
 
     public function user(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User', 'user_id');
     }
 
-    //model ->lien des produits aux categories
+    //model ->lien des produits aux categories // $comment->categories->categories
     public function categories(){
-        return $this->belongsTo('App\Categories');
+        return $this->belongsTo('App\Categories', 'categorie_id');
     }
 }
