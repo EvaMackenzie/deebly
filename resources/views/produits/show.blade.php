@@ -22,7 +22,12 @@
                     <p class="show-product-price">{{$renderProduct->price}}€</p>
                     <hr>
                     <p>{{$renderProduct->description}}</p>
-                    <a href="#" class="btn btn-primary btn-lg">Reserver !</a>
+                    <form method="post" action="/reservation" class="form-horizontal" enctype="multipart/form-data">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="productReservation" value="{{$renderProduct->id}}">
+                        <input type="hidden" name="authorProductReservation" value="{{$renderProduct->user_id}}">
+                        <button type="submit" class="btn btn-primary btn-lg">Reserver !</button>
+                    </form>
                 </div>
             </div>
             <div class="row">

@@ -34,3 +34,5 @@ route::resource('produits', 'ProductsController');
 Route::resource('profil', 'ProfileController');
 //Route::resource('annonce','AnnonceController');
 Route::resource('categories', 'CategoriesController');
+
+Route::resource('reservation', 'ReservationController');
