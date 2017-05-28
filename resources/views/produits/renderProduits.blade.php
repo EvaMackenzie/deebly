@@ -23,15 +23,17 @@
             <a class="btn-floating halfway-fab waves-effect waves-light teal" href="/produits/{{$product->id}}"><i class="material-icons">visibility</i></a>
        --}} </div>
         <div class="card-content">
-            <div class="card-content-title">
-                <a href="{{route('produits.show',$product)}}"><h3>{{$product->title}}</h3></a>
+
+            <div class="text-center">
+                <div class="card-content-title">
+                    <a href="{{route('produits.show',$product)}}"><h3>{{$product->title}}</h3></a>
+                    <p>{{$product->created_at->diffForHumans() }}</p>
+                </div>
+                <p>{{$product->categories->name}}</p>
+                <p>Proposé par : {{$product->user->name}}</p>
+                <h5>{{$product->price}}€</h5>
             </div>
-            <p>{{$product->created_at->diffForHumans() }}</p>
-            <p>{{$product->price}}€</p>
 
-
-            <p>{{$product->categories->name}}</p>
-            <p>{{$product->user->name}}</p>
 
         </div>
        {{-- <div class="card-action">
@@ -43,9 +45,9 @@
                 <input type="submit" name="submit" value="Supprimer">
             </form>
         </div>--}}
-        <div class="card-action card-action-custom">
-            <a href="#" class=""><i class="material-icons">add</i></a>
-            <a href="#" class="pull-right card-action-link">Lire plus</a>
+        <div class="card-action card-action-custom text-center">
+            {{--<a href="#" class=""><i class="material-icons">add</i></a>--}}
+            <a href="{{route('produits.show',$product)}}" class="card-action-link text-center">Lire plus</a>
         </div>
     </div>
 </div>

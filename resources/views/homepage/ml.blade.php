@@ -25,7 +25,12 @@
     <meta name="twitter:card" content="" />
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('home/images/own/favicons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('home/images/own/favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('home/images/own/favicons/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('home/images/own/favicons/manifest.json') }}">
+    <link rel="mask-icon" href="{{ asset('home/images/own/favicons/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Google Webfonts -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -68,8 +73,7 @@
             @endif
         @endif
         <li><a href="#">Qui sommes-nous ?</a></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="{{ url('/mentions-legales') }}">Mentions légales</a></li>
         @if (Route::has('login'))
             @if (Auth::check())
                 <li>
@@ -98,7 +102,6 @@
         <a href="#"><i class="icon-twitter"></i></a>
         <a href="#"><i class="icon-facebook"></i></a>
         <a href="#"><i class="icon-instagram"></i></a>
-        <a href="#"><i class="icon-youtube"></i></a>
     </p>
 </div>
 
@@ -401,47 +404,31 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-4 col-md-push-3">
-                        <h3 class="fh5co-lead">About</h3>
+                        <h3 class="fh5co-lead">Deebly</h3>
                         <ul>
-                            <li><a href="#">Tour</a></li>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Jobs</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">New Features</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Qui sommes nous</a></li>
+                            <li><a href="#">Contactez nous</a></li>
+                            <li><a href="#">Partenaires </a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-sm-4 col-md-push-3">
-                        <h3 class="fh5co-lead">Support</h3>
+                        <h3 class="fh5co-lead">Help !</h3>
                         <ul>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Security</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">More Apps</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Mode d'emploi</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-sm-4 col-md-push-3">
-                        <h3 class="fh5co-lead">More Links</h3>
-                        <ul>
-                            <li><a href="#">Feedback</a></li>
-                            <li><a href="#">Frequently Ask Questions</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">More Apps</a></li>
-                        </ul>
+                        <p> <i>Nous sommes une bande de passionnés de sport, unis par un objectif commun : faire en sorte que chacun puisse faire du sport où et quand il veut.<i> </p>
                     </div>
 
                     <div class="col-md-3 col-sm-12 col-md-pull-9">
-                        <div class="fh5co-footer-logo"><a href="index.html">Deebly</a></div>
-                        <p class="fh5co-copyright"><small>&copy; 2017. All Rights Reserved. <br>	Template par <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Images : <a href="http://pexels.com/" target="_blank">Pexels</a></small></p>
+                        <div class="fh5co-footer-logo"><a href="/">Deebly</a></div>
+                        <p class="fh5co-copyright"><small>&copy; 2017 Deebly - All Rights Reserved.</small></p>
                         <p class="fh5co-social-icons">
-                            <a href="#"><i class="icon-twitter"></i></a>
-                            <a href="#"><i class="icon-facebook"></i></a>
+                            <a href="https://twitter.com/"><i class="icon-twitter"></i></a>
+                            <a href="https://www.facebook.com/sellal.eva"><i class="icon-facebook"></i></a>
                             <a href="#"><i class="icon-instagram"></i></a>
-                            <a href="#"><i class="icon-youtube"></i></a>
                         </p>
                     </div>
 

@@ -8482,6 +8482,7 @@ pre {
   float: left;
   padding: 7px 10px 7px 12px;
   text-transform: uppercase;
+  font-style: initial;
 }
 #fh5co-footer .fh5co-footer-logo a:hover, #fh5co-footer .fh5co-footer-logo a:active, #fh5co-footer .fh5co-footer-logo a:focus {
   color: #fff;

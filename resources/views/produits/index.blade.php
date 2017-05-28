@@ -2,8 +2,8 @@
 @section('pageTitle', 'Produits')
 
 @section('content')
-    <div class="container">
-        <h3 class="text-right">{{$renderProducts->total()}} produits dispo à la location</h3>
+    <div class="container section-20">
+        {{--<h3 class="text-right">{{$renderProducts->total()}} produits disponibles à la location</h3>--}}
         <div class="row">
             @foreach($renderProducts as $product)
                 @include('produits.renderProduits')
