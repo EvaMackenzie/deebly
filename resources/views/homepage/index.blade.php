@@ -67,9 +67,8 @@
                 <li> <a href="{{ url('/register') }}">S'inscrire</a></li>
             @endif
         @endif
-        <li><a href="#">Qui sommes-nous ?</a></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="">Qui sommes-nous ?</a></li>
+        <li><a href="{{ url('/mentions-legales') }}">Mentions légales</a></li>
         @if (Route::has('login'))
             @if (Auth::check())
                 <li>
@@ -98,7 +97,6 @@
         <a href="#"><i class="icon-twitter"></i></a>
         <a href="#"><i class="icon-facebook"></i></a>
         <a href="#"><i class="icon-instagram"></i></a>
-        <a href="#"><i class="icon-youtube"></i></a>
     </p>
 </div>
 
@@ -171,7 +169,7 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
                             <h2 class="fh5co-lead to-animate">Que pouvez vous faire avec Deebly ?</h2>
-                            <p class="fh5co-sub to-animate">La plateforme  collaborative Deebly a été développée par des passionnés de sport  afin de répondre à chacun de vos besoins. Notre objectif : vous donner la possibilité de pouvoir louer un kit de pétanque, des raquettes de ping pong, un canoé de façon ponctuelle. Nous pensons que la liberté de pratique n’est pas dans la possession mais dans l’usage.</p>
+                            <p class="fh5co-sub to-animate">La plateforme collaborative Deebly a été développée par des passionnés de sport  afin de répondre à chacun de vos besoins. Notre objectif : vous donner la possibilité de pouvoir louer un kit de pétanque, des raquettes de ping pong, un canoé de façon ponctuelle. Nous pensons que la liberté de pratique n’est pas dans la possession mais dans l’usage.</p>
                             <h2 class="fh5co-sub to-animate">
                                 Donc : en mettant en relation un propriétaire et un loueur de matériel n’est ce pas une veritable une alternative à l’achat ?
                             </h2>
@@ -180,7 +178,7 @@
                             <a href="#" class="fh5co-feature to-animate">
                                 <span class="fh5co-feature-icon"><i class="icon-user-following"></i></span>
                                 <h3 class="fh5co-feature-lead">Se connecter</h3>
-                                <p class="fh5co-feature-text">Et acceder à l'interface de service</p>
+                                <p class="fh5co-feature-text">Et accéder à l'interface de service</p>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
@@ -195,7 +193,7 @@
                             <a href="#" class="fh5co-feature to-animate">
                                 <span class="fh5co-feature-icon"><i class="icon-pencil"></i></span>
                                 <h3 class="fh5co-feature-lead">Renseigner</h3>
-                                <p class="fh5co-feature-text">Son profil pour receptionner le matériel</p>
+                                <p class="fh5co-feature-text">Son profil pour réceptionner le matériel</p>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
@@ -207,7 +205,7 @@
                         </div>
                         <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
                             <p class="fh5co-sub to-animate">
-                                Le numero du propriétaire vous sera envoyé par mail avec un lieu de rendez-vous.
+                                Le numéro du propriétaire vous sera envoyé par mail avec un lieu de rendez-vous.
                             </p>
                         </div>
 
@@ -301,37 +299,40 @@
 
                             <div class="item">
                                 <div class="col-md-3 col-sm-3 col-xs-4 col-xxs-12">
-                                    <figure class="fh5co-vcard"><img src="{{ asset('home/images/user.jpg') }}" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive"></figure>
+                                    <figure class="fh5co-vcard"><img src="{{ asset('home/images/marine.jpg') }}" alt="#" class="img-responsive"></figure>
                                 </div>
                                 <div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
                                     <blockquote>
-                                        <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+                                        <p>&ldquo;Super concept, un bon service, j'ai déjà loué des palmes, un kayak et un kit de pétanque. Des gens dispo, du matos correspondant aux annonces.
+                                            Merci! :)&rdquo;</p>
                                     </blockquote>
-                                    <p class="fh5co-author fh5co-uppercase-sm"><span>Gustav Barrow</span>, XYZ Inc.</p>
+                                    <p class="fh5co-author fh5co-uppercase-sm"><span>Marie Vrn</span>, 28/05/2017.</p>
                                 </div>
                             </div>
 
                             <div class="item">
                                 <div class="col-md-3 col-sm-3 col-xs-4 col-xxs-12">
-                                    <figure class="fh5co-vcard"><img src="{{ asset('home/images/user_2.jpg') }}" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive"></figure>
+                                    <figure class="fh5co-vcard"><img src="{{ asset('home/images/finn.jpg') }}" alt="#" class="img-responsive"></figure>
                                 </div>
                                 <div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
                                     <blockquote>
-                                        <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+                                        <p>&ldquo; Service et plateforme au top ! vraiment bien. J'ai pu faire un tour en Normandie avec un fixie loué pour la journée, c'etait super. Hyper réactif, matos fourni avec pompe pour regonfler et conseils prodigués.
+                                            Expérience à renouveler. Vivement l'app pour téléphone !</p>
                                     </blockquote>
-                                    <p class="fh5co-author fh5co-uppercase-sm"><span>Gustav Barrow</span>, XYZ Inc.</p>
+                                    <p class="fh5co-author fh5co-uppercase-sm"><span>Tom Wiltz</span>, 29/05/2017.</p>
                                 </div>
                             </div>
 
                             <div class="item">
                                 <div class="col-md-3 col-sm-3 col-xs-4 col-xxs-12">
-                                    <figure class="fh5co-vcard"><img src="{{ asset('home/images/user_3.jpg') }}" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive"></figure>
+                                    <figure class="fh5co-vcard"><img src="{{ asset('home/images/clara.jpg') }}" alt="#" class="img-responsive"></figure>
                                 </div>
                                 <div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
                                     <blockquote>
-                                        <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+                                        <p>&ldquo;I rent 2  volley-ball nets  in Vincennes for the weekend. I loved the concept and the collaborative service dedicated to sharing sport stuff.
+                                            It's easy and effective&rdquo;</p>
                                     </blockquote>
-                                    <p class="fh5co-author fh5co-uppercase-sm"><span>Gustav Barrow</span>, XYZ Inc.</p>
+                                    <p class="fh5co-author fh5co-uppercase-sm"><span>Clara Schoumann</span>, 31/05/2017.</p>
                                 </div>
                             </div>
 
@@ -370,51 +371,6 @@
                 </div>
             </div>
 
-
-            <div id="fh5co-products" data-section="products">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-                            <h2 class="fh5co-lead animate-single product-animate-1">Un large choix de locations !</h2>
-                            <p class="fh5co-sub animate-single product-animate-2">En choissisant Deebly, vous trouverez tout ce qu'il vous faut pour vous amuser entre amis et profiter du temps estival !</p>
-                        </div>
-
-
-                        @foreach($products as $product)
-
-
-                            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                                <a href="#" class="fh5co-figure to-animate image-popup">
-                                    <figure>
-                                        <img src="uploads/images/{{$product->picture_url}}" alt="Free HTML5 Responsive Template" class="img-responsive">
-                                    </figure>
-                                    <h3 class="fh5co-figure-lead">{{$product->title}}</h3>
-                                    <p class="fh5co-figure-text">{{$product->created_at->diffForHumans() }}</p>
-                                    <p class="fh5co-figure-text">{{$product->price}}€</p>
-                                </a>
-                            </div>
-
-                        @endforeach
-
-
-                        <div class="clearfix visible-sm-block"></div>
-
-                        <div class="fh5co-spacer fh5co-spacer-sm"></div>
-
-                        <div class="col-md-4 col-md-offset-4 text-center to-animate">
-                            @if (Route::has('login'))
-                                @if (Auth::check())
-                                    <a href="{{ url('/produits') }}" class="btn btn-primary ">Accès aux locations</a>
-                                @else
-                                    <a href="{{ url('/register') }}" class="btn btn-primary">S'inscrire</a>
-                                @endif
-                            @endif
-                        </div>
-                    </div>
-                </div>
-
-            </div>
 
             <div id="fh5co-features-3" data-section="benefits">
                 <div class="container">
@@ -471,6 +427,53 @@
                     </div>
                 </div>
             </div>
+
+            <div id="fh5co-products" data-section="products">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
+                            <h2 class="fh5co-lead animate-single product-animate-1">Un large choix de locations !</h2>
+                            <p class="fh5co-sub animate-single product-animate-2">En choissisant Deebly, vous trouverez tout ce qu'il vous faut pour vous amuser entre amis et profiter du temps estival !</p>
+                        </div>
+
+
+                        @foreach($products as $product)
+
+
+                            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                                <a href="#" class="fh5co-figure to-animate image-popup">
+                                    <figure>
+                                        <img src="uploads/images/{{$product->picture_url}}" alt="Free HTML5 Responsive Template" class="img-responsive">
+                                    </figure>
+                                    <h3 class="fh5co-figure-lead">{{$product->title}}</h3>
+                                    <p class="fh5co-figure-text">{{$product->created_at->diffForHumans() }}</p>
+                                    <p class="fh5co-figure-text">{{$product->price}}€</p>
+                                </a>
+                            </div>
+
+                        @endforeach
+
+
+                        <div class="clearfix visible-sm-block"></div>
+
+                        <div class="fh5co-spacer fh5co-spacer-sm"></div>
+
+                        <div class="col-md-4 col-md-offset-4 text-center to-animate">
+                            @if (Route::has('login'))
+                                @if (Auth::check())
+                                    <a href="{{ url('/produits') }}" class="btn btn-primary ">Accès aux locations</a>
+                                @else
+                                    <a href="{{ url('/register') }}" class="btn btn-primary">S'inscrire</a>
+                                @endif
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
 
             <div class="fh5co-bg-section cta" id="fh5co-cta" style="background-image: url('../home/images/own/petanque.jpg'); background-attachment: fixed;">
                 <div class="fh5co-overlay"></div>
@@ -552,37 +555,93 @@
                 </div>
 
 
+
+
+
                 <div class="container">
-                    <div class="faq-accordion active to-animate">
-                        <span class="faq-accordion-icon-toggle active"><i class="icon-arrow-down"></i></span>
-                        <h3>Qu'est ce que Deebly ?</h3>
-                        <div class="faq-body" style="display: block;">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                    <div class="faq-accordion to-animate">
+                        <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
+                        <h3>Qui peut déposer des annonces ?</h3>
+                        <div class="faq-body">
+                            <p>  Tous les particuliers majeurs et propriétaires de matériel qui souhaitent rentabiliser leur investissement. Mais aussi tous les professionnels de la location qui souhaitent bénéficier des avantages de Deebly, sous réserve qu'il nous informe de leur présence en nous contactant par email à contact@deebly.net</p>
                         </div>
                     </div>
                     <div class="faq-accordion to-animate">
                         <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-                        <h3>Est ce que Deebly est gratuit ?</h3>
+                        <h3>Quel matériel je peux proposer à la location sur le site ?</h3>
                         <div class="faq-body">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                            <p>Pour le moment, notre plateforme propose à la location les sports estivaux de la catégorie : mer, montagne, urbain et extrême. Si vous souhaitez déposer un article qui ne fait pas partie d’une de ces catégories, écrivez-nous et nous vous contacterons lorsque nous ouvrirons cette nouvelle catégorie.
+                            </p>
                         </div>
                     </div>
+
                     <div class="faq-accordion to-animate">
                         <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-                        <h3>Comment acceder au service ?</h3>
+                        <h3>Est-ce que ça me coûte quelque chose de déposer une annonce?</h3>
                         <div class="faq-body">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                            <p>Pas du tout ! Que vous soyez un particulier ou un professionnel de la location, déposer une annonce est entièrement gratuit et vous prendra moins de 3 minutes. De plus, aucune commission ni frais de gestion ne sont facturés pour le propriétaire lors d’une location.
+                                Vous pouvez déposer gratuitement vos annonces sur Deeblu. Seul les annonces en « vedette » sont payantes. La consultation et mise en relation avec le loueur est TOTALEMENT GRATUITE
+                            </p>
                         </div>
                     </div>
+
                     <div class="faq-accordion to-animate">
                         <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-                        <h3>Que faire en cas de problème sur le site ?</h3>
+                        <h3>Puis-je proposer mon matériel à la vente ?</h3>
                         <div class="faq-body">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                            <p>Malheureusement nous ne sommes pas vendeur, nous sommes une plateforme collaborative. Donc nous n’acceptons pas les annonces qui concernent des ventes de matériel. Si vous recherchez un bon site pour vendre votre matériel, n’hésitez pas à nous contacter on vous aiguillera.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="faq-accordion to-animate">
+                        <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
+                        <h3>A quel prix dois-je mettre mon matériel ?</h3>
+                        <div class="faq-body">
+                            <p>C’est vous qui décidez du prix auquel vous désirez louer votre matériel. Nous demandons simplement un minimum de 5€, que ce soit pour deux heures, un jour, ou une semaine.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-accordion to-animate">
+                        <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
+                        <h3> Que se passe-t-il si j’annule une réservation ?</h3>
+                        <div class="faq-body">
+                            <p>Si vous ne pouvez honorer votre engagement, vous devez annuler la réservation immédiatement via votre espace personnel, afin que le locataire soit averti au plus vite et trouve une autre solution. Si l’annulation est liée à un événement climatique qui pourrait mettre en danger le locataire durant la période de location, Deebly ne pénalise pas le propriétaire. Si en revanche, vous annulez à plusieurs reprises sans motifs, pourra se voir contraint de faire descendre votre annonce dans le bas des résultats de recherche et ou de la supprimer.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-accordion to-animate">
+                        <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
+                        <h3> Que se passe-t-il si quelqu'un se blesse, ou crée des dégâts avec mon matériel?</h3>
+                        <div class="faq-body">
+                            <p> La personne qui loue votre matériel est la seule responsable de son utilisation et de tout dommage (corporel et incorporel) qu’elle pourrait causer avec. Néanmoins, comme le stipule nos conditions générales de vente et d’utilisation, le propriétaire doit proposer un article en bon état de fonctionnement, afin que le loueur ne court aucun danger lorsqu’il utilise le matériel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-accordion to-animate">
+                        <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
+                        <h3>Que faire en cas d'autre problème ?</h3>
+                        <div class="faq-body">
+                            <p>Nous contacter</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-accordion to-animate">
+                        <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
+                        <h3>A quoi correspond la caution ?</h3>
+                        <div class="faq-body">
+                            <p>La caution constitue une sécurité en plus de l’assurance pour le propriétaire. Cette caution est réalisée par empreinte bancaire via notre prestataire de paiement Paypal. Elle est fixée par le propriétaire suivant la valeur et l’état de son bien, pour chaque location effectuée sur le site Deebly, et peut être prélevée si besoin.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+
+
 
             {{--<div id="fh5co-subscribe">
                 <div class="container">
@@ -623,47 +682,32 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-4 col-md-push-3">
-                        <h3 class="fh5co-lead">About</h3>
+                        <h3 class="fh5co-lead">Deebly</h3>
                         <ul>
-                            <li><a href="#">Tour</a></li>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Jobs</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">New Features</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Qui sommes nous</a></li>
+                            <li><a href="#">Contactez nous</a></li>
+                            <li><a href="#">Partenaires </a></li>
                         </ul>
                     </div>
+
                     <div class="col-md-3 col-sm-4 col-md-push-3">
-                        <h3 class="fh5co-lead">Support</h3>
+                        <h3 class="fh5co-lead">Help!</h3>
                         <ul>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Security</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">More Apps</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="">Mode d'emploi</a></li>
                         </ul>
                     </div>
+
                     <div class="col-md-3 col-sm-4 col-md-push-3">
-                        <h3 class="fh5co-lead">More Links</h3>
-                        <ul>
-                            <li><a href="#">Feedback</a></li>
-                            <li><a href="#">Frequently Ask Questions</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">More Apps</a></li>
-                        </ul>
+                        <p> <i>Nous sommes une bande de passionnés de sport, unis par un objectif commun : faire en sorte que chacun puisse faire du sport où et quand il veut.<i> </p>
                     </div>
 
                     <div class="col-md-3 col-sm-12 col-md-pull-9">
                         <div class="fh5co-footer-logo"><a href="index.html">Deebly</a></div>
-                        <p class="fh5co-copyright"><small>&copy; 2017. All Rights Reserved. <br>	Template par <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Images : <a href="http://pexels.com/" target="_blank">Pexels</a></small></p>
-                        <p class="fh5co-social-icons">
-                            <a href="#"><i class="icon-twitter"></i></a>
-                            <a href="#"><i class="icon-facebook"></i></a>
+                        <p class="fh5co-copyright"><small>&copy; 2017. Deebly 2017 <br>
+                            <a href="https://twitter.com/"><i class="icon-twitter"></i></a>
+                            <a href="https://www.facebook.com/sellal.eva"><i class="icon-facebook"></i></a>
                             <a href="#"><i class="icon-instagram"></i></a>
-                            <a href="#"><i class="icon-youtube"></i></a>
                         </p>
                     </div>
 
