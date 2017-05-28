@@ -57,7 +57,7 @@
 </nav>--}}
 <ul id="dropdown1" class="dropdown-content dropdown-menu-fix">
     <li><a href="{{ route('profil.index') }}"><i class="material-icons">person_pin</i>Mon profil</a></li>
-    <li><a href="#!"><i class="material-icons">settings</i>Paramètres</a></li>
+  {{--  <li><a href="#!"><i class="material-icons">settings</i>Paramètres</a></li>--}}
     <li> <a href="{{ route('logout') }}"
             onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
@@ -123,7 +123,7 @@
                 </li>--}}
                     <li><a href="{{ route('produits.index') }}"><i class="material-icons">shopping_basket</i>Produits</a></li>
                     <li><a href="{{ route('profil.index') }}"><i class="material-icons">person_pin</i>Mon profil</a></li>
-                    <li><a href="#!"><i class="material-icons">settings</i>Paramètres</a></li>
+                  {{--  <li><a href="#!"><i class="material-icons">settings</i>Paramètres</a></li>--}}
                     <li> <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">

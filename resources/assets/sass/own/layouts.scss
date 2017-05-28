@@ -60,7 +60,7 @@
 }
 
 .pagination li.active span{
-  background-color: #ee6e73 !important;
+  background-color: #26a69a !important;
   border: none !important;
   color: #ffffff !important;
 }
@@ -132,4 +132,25 @@
 
 .custom-single-profile-content {
   margin-left: 25px;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+  background-color: transparent;
+  color: #26a69a;
+}
+
+.tabs .tab a {
+  color: rgba(38,166,154,0.7);
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: color .28s ease;
+}
+
+.tabs .indicator {
+  background-color:  #26a69a;
 }

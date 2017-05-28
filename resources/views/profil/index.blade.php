@@ -6,10 +6,8 @@
             <div class="row">
                 <div class="col s12">
                     <ul class="tabs">
-                        <li class="tab col s3"><a class="active" href="#test1">Mon profil</a></li>
-                        <li class="tab col s3"><a href="#test2">Mes annonces</a></li>
-                        <li class="tab col s3"><a href="#test3">Mes locations</a></li>
-                        <li class="tab col s3"><a href="#test4">Statistiques</a></li>
+                        <li class="tab col s6"><a class="active" href="#test1">Mon profil</a></li>
+                        <li class="tab col s6"><a href="#test2">Mes annonces</a></li>
                     </ul>
                 </div>
                 <div id="test1" class="col s12">
@@ -92,8 +90,6 @@
                     </table>
                         </div>
                 </div>
-                <div id="test3" class="col s12">Test 3</div>
-                <div id="test4" class="col s12">Test 4</div>
             </div>
         </div>
     </div>
