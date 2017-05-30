@@ -95,9 +95,10 @@ class ProductsController extends Controller
     {
         $user = Auth::user()->id;
         $product   = Products::find($id);
+        $allCat = Categories::all();
         //dd($user);
         if ($user == $product->user_id) {
-            return view('produits.edit')->with(compact('product'));
+            return view('produits.edit')->with(compact('product', 'allCat'));
         } else {
             return view('produits.errorEdit');
         }
@@ -116,6 +117,7 @@ class ProductsController extends Controller
             'nameProduct' => 'required|max:30',
             'descProduct' => 'required',
             'priceProduct' => 'required',
+            'catProduct' => 'required',
         ]);
         $productUpdate = Products::findOrFail($id);
 
@@ -123,6 +125,8 @@ class ProductsController extends Controller
             'title' => $request->nameProduct,
             'description' => $request->descProduct,
             'price' => $request->priceProduct,
+            'categorie_id' => $request->catProduct,
+
         ]);
         return redirect()->route('produits.show', $productUpdate);
     }

@@ -16,11 +16,19 @@
                 </div>
             </div>
             {{--categories rajoutées--}}
-            <div class="form-group">
+                    <!-- <div class="form-group">
                 <label for="nameProduct" class="col-sm-2 control-label">Categories</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="nameCategories" name="nameCategories">
                 </div>
+            </div> -->
+            <div class="form-group">
+                <label for="catProduct" class="col-sm-2 control-label">Catégorie</label>
+                <select class="col-sm-10" name="catProduct">
+                    @foreach($allCat as $cat)
+                        <option value="{{$cat->id}}" @if ($product->categorie_id == $cat->id) selected @endif>{{$cat->name}}</option>
+                    @endforeach
+                </select>
             </div>
 
             <div class="form-group">
