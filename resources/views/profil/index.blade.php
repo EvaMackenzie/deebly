@@ -15,7 +15,7 @@
                         <div class="col-sm-3">
                             <img src="{{ Gravatar::src($myProfil->email, 200) }}" class="img-responsive center-block">
                             <div class="profile-sidebar-button">
-                                <a class="waves-effect waves-light btn btn-block white-text"><i class="material-icons left">mode_edit</i>Modifer</a>
+                                <a href="{{route('profil.edit',$myProfil)}}" class="waves-effect waves-light btn btn-block white-text"><i class="material-icons left">mode_edit</i>Modifer</a>
                                 <a class="waves-effect waves-light btn btn-block red white-text"><i class="material-icons left">delete</i>Supprimer</a>
                             </div>
                             <div class="">

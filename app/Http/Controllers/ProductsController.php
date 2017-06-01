@@ -6,16 +6,23 @@ use Illuminate\Http\Request;
 use App\Products;
 use App\Categories;
 use App\Reservation;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Lang;
 use Intervention\Image\Facades\Image;
-
+use Carbon\Carbon;
 class ProductsController extends Controller
 {
 
     public function __construct()
     {
         $this->middleware('auth');
+        Lang::getLocale();
+        App::setLocale('fr');
+        setlocale(LC_TIME, 'fr');
+        //Carbon::setLocale('fr');
+        Carbon::setLocale(config('app.locale'));
     }
 
     public function index()

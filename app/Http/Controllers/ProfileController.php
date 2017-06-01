@@ -71,7 +71,17 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = Auth::user()->id;
+        $myProfil=User::findOrFail($id);
+        //dd($user);
+       //dd($myProfil);
+        if ($user == $myProfil->id) {
+            return view('profil.edit')->with(compact('myProfil'));
+        } else {
+            return view('profil.errorEdit');
+        }
+
+
     }
 
     /**

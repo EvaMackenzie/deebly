@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('pageTitle', 'Reservation')
+@section('pageTitle', 'Reservation '.$renderReservation->products->title)
 
 @section('content')
     <div class="section-40">
